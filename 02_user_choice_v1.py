@@ -1,17 +1,19 @@
-import random
-
 # Function go here
+def choice_checker(question):
+
+    valid = False
+    while not valid:
+
+        # Ask user for choice
+        response = input(question)
+
+        if response == "r" or response == "rock":
+            return response
 
 
-# main routine goes here
+# Main routine goes here
 
-# list valid responses
-yes_no_list = ["yes", "no"]
-rps_list = ["rock", "paper", "scissors", "xxx"]
+# Ask user for choice and check it's valid
+user_choice = choice_checker("choose rock / paper / scissors(r/p/s):")
 
-# Ask user if they have played before.
-# If 'yes', show instructions...
-
-
-# adk user for # of rounds then loop...
 
