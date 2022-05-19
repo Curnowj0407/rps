@@ -1,10 +1,8 @@
 # Fuction used to check input is vaild
 
 def check_rounds():
-
-
     while True:
-        response = input ("how many rounds do you want to play ? ")
+        response = input("how many rounds do you want to play ? ")
 
         round_error = "please type either <enter> or an integer that is more 0"
 
@@ -13,15 +11,15 @@ def check_rounds():
                 response = int(response)
 
                 if response < 1:
-                    print (round_error)
+                    print(round_error)
                     continue
 
             except ValueError:
                 print(round_error)
                 continue
 
-
         return response
+
 
 # Main routine goes here
 
@@ -36,15 +34,11 @@ while end_game == "no":
 
     # Rounds Heading
     print()
-    if rounds =="":
-        
-        headings = "continue mode: round {}".format(rounds_played +1)
+    if rounds == "":
+
+        headings = "continue mode: round {}".format(rounds_played + 1)
     else:
         headings = "round {} of {}".format(rounds_played + 1, rounds)
-        print(headings)
-        choose = input(choose_instruction)
-        if rounds_played == rounds -1:
-            end_game = "yes"
 
     print(headings)
     choose = input("{} or 'xxx' to end:".format(choose_instruction))
@@ -57,7 +51,4 @@ while end_game == "no":
 
     rounds_played += 1
 
-    print("thank you for playing")
-
-
-
+print("thank you for playing")
